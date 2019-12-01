@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :bio, presence: true
   validates :expertise, presence: true
   validates :occupation, presence: true
-  validates :email, uniqueness: true
+  validates :email, length: { maximum: 255 }, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   before_validation { email.downcase! }
   has_secure_password
 end

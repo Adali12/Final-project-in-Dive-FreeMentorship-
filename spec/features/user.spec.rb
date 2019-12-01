@@ -19,7 +19,7 @@ fill_in  'Email' ,  with: 'olivier@gmail.com'
  click_button 'Log in'
  @user = User.first 
 end
-scenario "Test Mentee Registration" do
+scenario "Test user Registration" do
     visit new_session_path
     click_link 'Signup'
     fill_in 'Firstname', with: 'Aimable'
