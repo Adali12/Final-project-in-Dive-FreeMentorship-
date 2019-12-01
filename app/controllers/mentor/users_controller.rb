@@ -13,29 +13,23 @@ class Mentor::UsersController < ApplicationController
   end
   def create
     @user = User.new(user_params)
-    respond_to do |format|
       if @user.save
         session[:user_id]= @user.id
         redirect_to mentor_users_path(@user), notice: 'User was successfully created.'
       else
         render :new
       end
-    end
   end
   def update
-    respond_to do |format|
       if @user.update(user_params)
         redirect_to @user, notice: 'User was successfully updated.' 
       else
         render :edit
-      end
     end
   end
   def destroy
     @user.destroy
-    respond_to do |format|
     redirect_to users_url, notice: 'User was successfully destroyed.' 
-    end
   end
   private
     def set_user
