@@ -1,0 +1,28 @@
+.cards-container {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.user-cards-container {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+
+.message-field {
+  width: 20rem!important;
+  margin-top: 1rem;
+}
+
+.messaging {
+  margin-top: 10rem;
+}
+.BackImage{
+  background-image: url("backA.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.BackgroundI{
+  background-image: url("desi.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

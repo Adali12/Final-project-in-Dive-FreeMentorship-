@@ -1,0 +1,93 @@
+<div class=nav1>
+<nav class="navbar navbar-expand-lg navbar-blue bg-dark">
+<%= link_to 'Admin', admin_users_path,class:"nav-item active", style:"color:#fff;" %>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item ">
+      <a class="nav-link" href="#" style="color:#fff;">About As</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="#" style="color:#fff;">Contact As</a>
+    </li>
+    <li class="nav-item ">
+    <%= link_to 'Request', admin_profiles_path,class:"nav-link color:#fff;"%>
+  </li>
+    <form class="form-inline my-2 my-lg-0">
+    <%= search_form_for @search do |form| %>
+      <%= form.text_field :firstName_or_lastName_cont, class:"form-control mr-sm-2",placeholder:"Search"%>
+      <div class="actions1"><%= form.submit "search",class:"btn btn-outline-success my-2 my-sm-0", type:"submit" %></div>
+    <%end%>
+    </form>
+    <li class="nav-item dropdown" style="margin-left:35rem;">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#fff;">
+      <% @users.each do |user| %>
+        <% if user.id == current_user.id %>
+        <i class="icon-user"></i><%= user.lastName %>
+        <% end %>
+          <% end %>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <%= link_to "Profile",admin_user_path(current_user.id)%>
+        <div class="dropdown-divider"></div>
+        <%= link_to "Logout", session_path(current_user.id), method: :delete %>
+      </div>
+    </li>
+  </ul>
+</div>
+</nav>
+</div>
+<div class="table1" >
+<p id="notice"><%= notice %></p>
+<h1>USERS(Mentor and Mentee List)</h1>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Bio</th>
+      <th>Occupation</th>
+      <th>Expertise</th>
+      <th>Admin</th>
+      <th>Mentor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <% if logged_in? %>
+      <% if user.id != current_user.id %>
+      <tr>
+        <div>
+        <td><%= user.firstName %></td>
+        <td><%= user.lastName %></td>
+        <td><%= user.email %></td>
+        <td><%= user.address %></td>
+        <td><%= user.bio %></td>
+        <td><%= user.occupation %></td>
+        <td><%= user.expertise %></td>
+        <td><%= user.admin %></td>
+        <td><%= user.mentor %></td>        
+        <td><%= link_to 'Show',admin_user_path(user),class:"btn btn-outline-info" %></td>
+        <td><%= link_to 'Edit',edit_admin_user_path(user),class:"btn btn-outline-info" %></td>
+        </div>
+        <td><%= link_to 'Destroy',admin_user_path(user), method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-outline-danger" %></td>
+        <td>
+          <%= link_to 'change as mentor',admin_user_path(user, :mentor => true),method: :patch,class:"btn btn-outline-success" %>
+        </td> 
+        <td>
+        <%= link_to 'change as mentee',admin_user_path(user, :mentor => false),method: :patch,class:"btn btn-outline-success" %>
+      </td> 
+      <td><%= link_to user.firstName, user %></td>
+      <td><%= link_to 'message', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post,class:"btn btn-outline-info" %></td>
+      </tr>
+      <% end %>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+</div>
