@@ -23,6 +23,7 @@
     </ul>
   </div>
 </nav>
+<div class="container mt-5">
 <%= form_with(model: user, local: true) do |form| %>
      <% if user.errors.any? %>
         <div id="error_explanation">
@@ -43,13 +44,14 @@
           <%= form.label :mentor %>
           <%= form.radio_button :mentor, 'Mentor' %>
         </div>
+        </div>
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
 <div class="container register-form">
+
             <div class="form">
                 <div class="note">
                     <p>Free Mentorship Registration </p>
