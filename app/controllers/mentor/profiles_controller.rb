@@ -14,31 +14,22 @@ class Mentor::ProfilesController < ApplicationController
   end
   def create
     @profile = Profile.new(profile_params)
-    respond_to do |format|
       if @profile.save
        redirect_to @profile, notice: 'Profile was successfully created.' 
-       render :show, status: :created, location: @profile
       else
       render :new
-      end
     end
   end
   def update
-    respond_to do |format|
       if @profile.update(profile_params)
        redirect_to @profile, notice: 'Profile was successfully updated.'
-       render :show, status: :ok, location: @profile
       else
         render :edit 
-      
-      end
     end
   end
   def destroy
     @profile.destroy
-    respond_to do |format|
     redirect_to profiles_url, notice: 'Profile was successfully destroyed.'
-    end
   end
   private
     def set_profile

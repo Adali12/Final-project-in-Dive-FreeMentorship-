@@ -21,32 +21,23 @@ end
   end
   def create
     @user = User.new(user_params)
-
-    respond_to do |format|
       if @user.save
         session[:user_id]= @user.id
         redirect_to @user, notice: 'User was complteted created.'
-         render :index, status: :created, location: @user
       else
       render :new 
-      end
     end
   end
   def update
-    respond_to do |format|
       if @user.update(user_params)
-         redirect_to @user, notice: 'User was complteted updated.' 
-        render :show, status: :ok, location: @user 
+         redirect_to @user, notice: 'User was complteted updated.'  
       else
       render :edit 
-      end
     end
   end
   def destroy
     @user.destroy
-    respond_to do |format|
      redirect_to users_url, notice: 'User was complteted destroyed.' 
-    end
   end
   private
     def set_user

@@ -27,14 +27,11 @@ end
   end
   def create
     @user = User.new(user_params)
-    respond_to do |format|
       if @user.save
         session[:user_id]= @user.id
         redirect_to admin_users_path(@user), notice: 'User was created.'
-        render :index, status: :created, location: admin_users_path(@user)
       else
      render :new 
-      end
     end
   end
   def update

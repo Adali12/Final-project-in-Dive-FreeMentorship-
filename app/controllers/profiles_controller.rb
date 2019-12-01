@@ -14,31 +14,22 @@ class ProfilesController < ApplicationController
   end
   def create
     @profile = Profile.new(profile_params)
-
-    respond_to do |format|
       if @profile.save
-       redirect_to @profile, notice: 'Profile was  created.'
-        render :show, status: :created, location: @profile 
+       redirect_to @profile, notice: 'Profile was  created.' 
       else
        render :new 
       end
-    end
   end
   def update
-    respond_to do |format|
       if @profile.update(profile_params)
         redirect_to @profile, notice: 'Profile was  updated.'
-         render :show, status: :ok, location: @profile 
       else
        render :edit 
       end
-    end
   end
   def destroy
     @profile.destroy
-    respond_to do |format|
     redirect_to profiles_url, notice: 'Profile was  destroyed.'
-    end
   end
   private
     def set_profile
