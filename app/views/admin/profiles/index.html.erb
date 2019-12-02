@@ -33,12 +33,11 @@
             </div>
           <div class="card-body" >
           <h2> Resume Cv:
-        
          <%= link_to 'Download',profile.cv, download: ''%></h2> 
           </div>
           <div class="card-body" >
           <h2>Image:
-          <%= image_tag(profile.pic, style:"width:20%") %></h2>
+          <%= image_tag(profile.pic, style:"width:20%") if @profile.pic.attached? %></h2>
           </div>
           <div class="card-footer">
          <%= link_to 'Comment', admin_profile_path(profile),class:"btn btn-outline-info" %>

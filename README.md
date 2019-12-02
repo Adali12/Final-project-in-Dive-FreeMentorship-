@@ -30,7 +30,7 @@ Functions list
 
 -user editing function
 
--user deletion function
+-admin deletion function
 
 -list of mentor
 
@@ -76,13 +76,15 @@ Scheduled use Gem
 
 rspec-rails
 
-bootstrap
+bootsnap
 
-active storage
+selenium-webdriver
 
-jquery-rails
+bcrypt
 
 ransack
+
+active_storage_validations
 
 Skills
 

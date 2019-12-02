@@ -9,4 +9,19 @@ User.create!(firstName: "DU", lastName: "claude",email: "du@gmail.com",address: 
 User.create!(firstName: "mere", lastName: "paul",email: "mere@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: true,password: "password",password_confirmation: "password") 
 User.create!(firstName: "pere", lastName: "papa",email: "pere@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: true,password: "password",password_confirmation: "password") 
 User.create!(firstName: "sheja", lastName: "colombe",email: "colombe@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: true,password: "password",password_confirmation: "password") 
-User.create!(firstName: "kabeho", lastName: "marie",email: "kabeho@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: false,password: "password",password_confirmation: "password")      
+User.create!(firstName: "kabeho", lastName: "marie",email: "kabeho@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: false,password: "password",password_confirmation: "password") 
+User.create!(firstName: "kubwimana", lastName: "emable",email: "emable@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: true,password: "password",password_confirmation: "password") 
+User.create!(firstName: "habimana", lastName: "habimana",email: "emable@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: true,password: "password",password_confirmation: "password") 
+User.create!(firstName: "sakindi", lastName: "sakindi",email: "sakindi@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: false,password: "password",password_confirmation: "password") 
+User.create!(firstName: "uwera", lastName: "uwera",email: "uwera@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: true,password: "password",password_confirmation: "password") 
+User.create!(firstName: "paul", lastName: "paul",email: "paul@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: true,password: "password",password_confirmation: "password") 
+User.create!(firstName: "kubwayo", lastName: "kubwayo",email: "kubwayo@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: false,password: "password",password_confirmation: "password") 
+User.create!(firstName: "tamu", lastName: "tamu",email: "tamu@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: true,password: "password",password_confirmation: "password") 
+User.create!(firstName: "ange", lastName: "ange",email: "ange@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: true,password: "password",password_confirmation: "password") 
+User.create!(firstName: "atanti", lastName: "atanti",email: "atanti@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: false,password: "password",password_confirmation: "password") 
+User.create!(firstName: "rosa", lastName: "rosa",email: "rosa@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: true,password: "password",password_confirmation: "password") 
+User.create!(firstName: "petter", lastName: "petter",email: "petter@gmail.com",address: "nyarugenge",bio: "developer",occupation: "diveintocode",expertise: "expertise",admin:false,mentor: false,password: "password",password_confirmation: "password") 
+
+
+
+

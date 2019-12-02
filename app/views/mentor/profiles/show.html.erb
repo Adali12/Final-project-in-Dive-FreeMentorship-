@@ -29,7 +29,7 @@
 <p>
 <div style="width:20rem; height:auto">
   <strong>Pic:</strong>
-  <%= image_tag(@profile.pic, style:"width:9%") %>
+  <%= image_tag(@profile.pic, style:"width:9%") if @profile.pic.attached?%>
 </p>
 <p>
 <%= link_to 'view' ,@profile.cv%>
