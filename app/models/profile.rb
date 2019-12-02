@@ -3,4 +3,5 @@ class Profile < ApplicationRecord
   has_one_attached :pic
   has_one_attached :cv
   has_many :comments, dependent: :destroy
+  validates :cv, presence: true
 end

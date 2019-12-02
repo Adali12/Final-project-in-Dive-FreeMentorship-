@@ -70,3 +70,5 @@ gem 'factory_bot_rails'
 # gem 'database_cleaner'
 gem "launchy"
 gem "selenium-webdriver"
+gem 'active_storage_validations'
+gem 'mini_magick', '>= 4.9.5'

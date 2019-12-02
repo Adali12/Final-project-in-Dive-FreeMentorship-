@@ -27,7 +27,6 @@
     <%= link_to "Logout", session_path(current_user.id), method: :delete ,class:"nav-link"%>
   </div>
 </nav>
-
 <div class="container user-cards-container ">
   <p id="notice"><%= notice %></p>
   <div class="row d-flex justify-content-center">
@@ -38,10 +37,10 @@
         <p>
         <div style="width:20rem; height:auto">
         <strong>Pic:</strong>
-      <%= image_tag(@profile.pic, style:"width:9%") %>
+      <%= image_tag(@profile.pic, style:"width:9%") if @profile.pic.attached?  %>
       </p>
         <p><strong>Cv:
-        <%= link_to 'view' ,@profile.cv%>
+        <%= link_to 'view' ,@profile.cv if %>
         <%= link_to 'Download',@profile.cv, download: ''%>
           </strong>
         <p><%= @profile.comments.count %> comments</p>
