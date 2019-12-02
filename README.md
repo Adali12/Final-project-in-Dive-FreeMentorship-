@@ -30,9 +30,9 @@ Functions list
 
 -user editing function
 
--admin deletion function
+-admin perform deletion function
 
--list of mentor
+- mentee see list of mentor
 
 -send session function
 
