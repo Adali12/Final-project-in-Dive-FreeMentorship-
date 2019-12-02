@@ -40,18 +40,10 @@
       <%= image_tag(@profile.pic, style:"width:9%") if @profile.pic.attached?  %>
       </p>
         <p><strong>Cv:
-        <%= link_to 'view' ,@profile.cv if %>
+        <%= link_to 'view' ,@profile.cv  %>
         <%= link_to 'Download',@profile.cv, download: ''%>
           </strong>
-        <p><%= @profile.comments.count %> comments</p>
-        <p>List of Comments(Contents below are important)</p>
-        <!-- Get an HTML id of this comments_area and update only the part of that div -->
-        <div id="comments_area">
-          <!-- Render to display the posted comment list on the profile detail page -->
-          <%= render partial: 'comments/index', locals: { comments: @comments, profile: @profile } %>
-        </div>
-        <!-- Render to display the comment field on the blogs detail page -->
-        <%= render partial: 'comments/form', locals: { comment: @comment, blog: @profile } %>
+       <%= render 'comments/comment' %>
         <div class="card-footer">
         <%= link_to 'Edit', edit_profile_path(@profile) %> 
         </div>
