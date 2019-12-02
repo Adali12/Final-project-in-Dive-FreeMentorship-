@@ -4,8 +4,9 @@ class ProfilesController < ApplicationController
     @profiles= Profile.all
   end
   def show
-    @comments = @profile.comments
-    @comment = @profile.comments.build
+    @comments = Comment.where(profile_id: @profile)
+    # @comments = @profile.comments
+    # @comment = @profile.comments.build
   end
   def new
     @profile = Profile.new

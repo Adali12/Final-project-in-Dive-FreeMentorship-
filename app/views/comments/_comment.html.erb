@@ -1,0 +1,9 @@
+<ul>
+  <% @comments.each do |comment| %>
+      <li>
+        <p><br><%= comment.content %><br>
+        <%= link_to "delete", [comment.profile, comment], method: :delete, class:"genric-btn danger-border circle" %>
+        <%= link_to "edit ", edit_profile_comment_path(comment.profile, comment), class:"genric-btn success-border circle" %></p>
+  <% end %>
+<%= render 'comments/form'%>
+</ul>
