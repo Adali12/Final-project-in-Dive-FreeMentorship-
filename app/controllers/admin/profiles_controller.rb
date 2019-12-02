@@ -25,8 +25,8 @@ class Admin::ProfilesController < ApplicationController
       if @profile.update(profile_params)
       redirect_to @profile, notice: 'Profile was updated.'
       else
-     render :edit
-    end
+       render :edit
+      end
   end
   def destroy
     @profile.destroy
