@@ -1,4 +1,3 @@
-
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -46,21 +45,6 @@
     <%= form.label :expertise %>
     <%= form.text_field :expertise %>
   </div>
-
-  <div class="field">
-    <%= form.label :admin %>
-    <%= form.radio_button :admin, 'Admin' %>
-  </div>
-  <div class="field">
-    <%= form.label :mentor %>
-    <%= form.radio_button :mentor, 'Mentor' %>
-  </div>
-
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-
   <div class="field">
     <%= form.label :password_confirmation %>
     <%= form.password_field :password_confirmation %>

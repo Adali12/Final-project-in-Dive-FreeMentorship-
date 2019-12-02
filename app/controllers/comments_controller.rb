@@ -36,7 +36,7 @@ def create
 if @comment.save
   redirect_to profile_path(@profile)
 else
-  render 'new'
+  redirect_to profile_path(@profile)
 end
 end
 def destroy
