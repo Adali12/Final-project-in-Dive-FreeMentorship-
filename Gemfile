@@ -25,7 +25,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
 end
-gem 'rails_12factor', group: :production
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'notifications'
 gem 'ransack'
@@ -36,3 +35,4 @@ gem "launchy"
 gem "selenium-webdriver"
 gem 'active_storage_validations'
 gem 'mini_magick', '>= 4.9.5'
+gem 'rails_12factor', group: :production
