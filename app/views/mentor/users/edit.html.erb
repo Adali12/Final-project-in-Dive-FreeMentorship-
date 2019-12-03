@@ -10,12 +10,6 @@
       <li class="nav-item active">
         <%= link_to 'Mentor',mentor_users_path,class:"nav-link" %>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Abot Us </a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="#">Contact Us </a>
-      </li>
       <li class="nav-item ">
         <%= link_to 'Inbox Session', conversations_path,class:"nav-link" %>
       </li>
@@ -25,7 +19,9 @@
   </div>
 </nav>
 <div class="container user-cards-container ">
-<h1>Editing User</h1>
+<div class="card" style="">
+<div class="card-header"><h1>Editing User</h1></div>
 <%= render 'form', user: @user %>
-<%= link_to 'Back', users_path,class:"btn btn-primary" %>
+<div class="card-footer"><%= link_to 'Back', users_path,class:"btn btn-primary" %></div>
+</div>
 </div>

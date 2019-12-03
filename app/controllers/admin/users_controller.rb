@@ -40,7 +40,6 @@ end
       redirect_to admin_user_path(@user), notice: 'user changed'
   elsif @user.update(user_params)
     redirect_to admin_user_path(@user), notice: 'User was  updated.'
-     render :index, status: :ok, location: admin_user_path(@user) 
       else
         render :edit
     end

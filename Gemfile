@@ -35,3 +35,4 @@ gem "launchy"
 gem "selenium-webdriver"
 gem 'active_storage_validations'
 gem 'mini_magick', '>= 4.9.5'
+gem 'rails_12factor', group: :production

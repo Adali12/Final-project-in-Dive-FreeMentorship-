@@ -9,12 +9,6 @@
       <li class="nav-item active">
       <%= link_to 'Home',users_path,class:"nav-link" %>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Abot Us </a>
-        </li>
-        <li class="nav-item ">
-        <a class="nav-link" href="#">Contact Us </a>
-      </li>
     <%= link_to current_user.lastName,user_path(current_user.id),class:'nav-link ml-auto' %>
     <%= link_to "Logout", session_path(current_user.id), method: :delete ,class:"nav-link"%>
   </div>

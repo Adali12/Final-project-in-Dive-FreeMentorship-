@@ -8,12 +8,6 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Abot Us </a>
-      </li>
-      <li class="nav-item ">
-      <a class="nav-link" href="#">Contact Us </a>
-    </li>
       <li class="nav-item active">
       <a class="nav-link" href="#">Sign Up</a>
     </li>
@@ -24,13 +18,14 @@
   </div>
 </nav>
 <div class="container mt-5">
-<%= form_with(model: user, local: true) do |form| %>
-     <% if user.errors.any? %>
+
+<%= form_with(model: @user, local: true) do |form| %>
+     <% if @user.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
     
           <ul>
-          <% user.errors.full_messages.each do |message| %>
+          <% @user.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>
           </ul>
@@ -98,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-                    <%= form.submit  class:"btnSubmit" %>
+                    <%= form.submit %>
                     </button>
                     <p>Do you have an account?<br><%= link_to "log in", new_session_path,class:"btn btn-primary btn-sm" %>
                 </div>
